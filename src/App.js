@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import Rank from "./Components/Rank";
-// import Practice from "./Components/Practice";
+import Rank from "./Components/Rank";
+import Practice from "./Components/Practice";
 
 function App() {
   const [wordIndex, setWordIndex] = useState(0);
@@ -91,46 +91,35 @@ function App() {
     ],
   };
 
-  const options = ["verb", "noun", "adjective", "adverb"];
-
   function handleAnswer(e) {
     setWordIndex(wordIndex + 1);
     if (e.target.value === data.wordList[wordIndex].pos) {
-      setScore(score + 1);
+      setScore(score + 10);
     }
-    handleRank();
+    calculateRank();
   }
 
-  function handleRank() {
-    setRank(score);
+  function calculateRank() {
+    const total = data.scoresList.length;
+    let lower = 0;
+    for (let i = 0; i < data.scoresList.length; i++) {
+      if (data.scoresList[i] < score) {
+        lower++;
+        setRank(((lower / total) * 100).toFixed(2));
+      }
+    }
   }
 
   return (
     <div className="App">
       {wordIndex === data.wordList.length ? (
-        // <Rank />
-        <div className="rank-section">
-          Your rank is {rank} out of {data.scoresList.length}
-        </div>
+        <Rank rank={rank} />
       ) : (
-        // <Practice setWord={setWordIndex} />
-        <div className="practice-section">
-          <div className="word-section">{data.wordList[wordIndex].word}</div>
-          <div className="options-section">
-            {options.map((option) => {
-              return (
-                <button
-                  value={option}
-                  onClick={handleAnswer}
-                  key={option}
-                  className="option-button"
-                >
-                  {option}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        <Practice
+          wordIndex={wordIndex}
+          data={data}
+          handleAnswer={handleAnswer}
+        />
       )}
     </div>
   );
