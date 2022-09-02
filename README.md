@@ -6,13 +6,12 @@ To use this app run these commands:
 
 ## Screenshot
 
-![Word Recognizer Screenshot]()
+![Word Recognizer Screenshot](./src/images/Screenshot.png)
 
-### `npm install`
+- ### `npm install`
+- ### `npm start`
 
-### `npm start`
-
-### Built with
+#### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -20,7 +19,7 @@ To use this app run these commands:
 - React.js
 - Express.js
 
-## Author
+#### Author
 
 - Frontend Mentor - [@AyaZayed](https://www.frontendmentor.io/profile/AyaZayed)
 - Linkedin - [Aya Zayed](https://www.linkedin.com/in/aya-zayed-2000/)
