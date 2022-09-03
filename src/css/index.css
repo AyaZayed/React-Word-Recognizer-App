@@ -55,7 +55,7 @@ body {
 .navbar .start-button {
   background-color: var(--dark-purple);
   color: var(--light-beige);
-  padding: .8rem 1.5rem;
+  padding: 1rem 1.5rem;
   letter-spacing: 3px;
   border: none;
   font-size: 1rem;
@@ -184,7 +184,7 @@ body {
   color: var(--light-beige);
   font-size: 40px;
   font-weight: 700;
-
+  margin-bottom: 3rem;
 }
 
 .practice-section .answer-section .answer {
@@ -202,6 +202,49 @@ body {
 
 .practice-section .answer-section .wrong {
   background-color: var(--main-red);
+}
+
+.practice-section .progress-section {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-beige);
+  font-size: 20px;
+  width: calc(100% - 2rem);
+  justify-content: center;
+}
+
+.practice-section .progress-section label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 3px var(--dark-purple);
+}
+
+.practice-section .progress-section #progress {
+  width: calc(100% - 1rem);
+  height: 1rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.practice-section .progress-section #progress::-webkit-progress-bar {
+  background-color: var(--light-beige);
+
+}
+
+.practice-section .progress-section #progress::-webkit-progress-value {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(75, 59, 105, 1) 77%, rgba(62, 47, 91, 1) 100%);
+}
+
+.practice-section .progress-section #progress::-moz-progress-bar {
+  background-color: var(--light-beige);
+
+}
+
+.practice-section .progress-section #progress::-moz-progress-value {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(75, 59, 105, 1) 77%, rgba(62, 47, 91, 1) 100%);
 }
 
 .game-section {

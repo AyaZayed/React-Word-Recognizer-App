@@ -27,6 +27,18 @@ function Practice({ wordIndex, data, handleAnswer, isCorrect }) {
           )}
         </div>
       )}
+      <div className="progress-section">
+        <label htmlFor="progress">
+          {wordIndex === 1
+            ? `${wordIndex} question answered`
+            : `${wordIndex} questions answered`}
+        </label>
+        <progress
+          value={wordIndex}
+          max={data.wordList.length}
+          id="progress"
+        ></progress>
+      </div>
     </div>
   );
 }
