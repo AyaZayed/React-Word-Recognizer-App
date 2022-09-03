@@ -1,4 +1,4 @@
-function Practice({ wordIndex, data, handleAnswer }) {
+function Practice({ wordIndex, data, handleAnswer, isCorrect }) {
   const options = ["verb", "noun", "adjective", "adverb"];
 
   return (
@@ -18,6 +18,15 @@ function Practice({ wordIndex, data, handleAnswer }) {
           );
         })}
       </div>
+      {wordIndex !== 0 && (
+        <div className="answer-section">
+          {isCorrect ? (
+            <div className="answer right">✓</div>
+          ) : (
+            <div className="answer wrong">✗</div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
