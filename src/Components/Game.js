@@ -27,16 +27,21 @@ function Game() {
     for (let i = 0; i < data.scoresList.length; i++) {
       if (data.scoresList[i] < score) {
         lower++;
-        setRank(((lower / total) * 100).toFixed(2));
+        setRank(((lower / total) * 100).toFixed(1));
       }
     }
   }
 
   return (
-    <div>
+    <div className="game-section">
       <Navbar />
       {wordIndex === data.wordList.length ? (
-        <Rank rank={rank} />
+        <>
+          <Rank rank={rank} />
+          <button onClick={() => setWordIndex(0)} className="try-again-button">
+            Try Again
+          </button>
+        </>
       ) : (
         <Practice
           wordIndex={wordIndex}

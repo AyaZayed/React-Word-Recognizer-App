@@ -1,6 +1,10 @@
 function Rank({ rank }) {
   return (
-    <div className="rank-section">Your rank is {rank} among all the users.</div>
+    <div className="rank-section">
+      <div className="card">
+        Your rank is <span>{rank}</span> among all users
+      </div>
+    </div>
   );
 }
 

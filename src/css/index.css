@@ -146,6 +146,10 @@ body {
   text-shadow: 0 0 10px var(--dark-purple);
 }
 
+.practice-section .options-section {
+  margin-bottom: 4rem;
+}
+
 .practice-section .options-section button {
   font-size: 1.5rem;
   font-weight: 700;
@@ -177,7 +181,6 @@ body {
 }
 
 .practice-section .answer-section {
-  margin-top: 4rem;
   color: var(--light-beige);
   font-size: 40px;
   font-weight: 700;
@@ -199,4 +202,48 @@ body {
 
 .practice-section .answer-section .wrong {
   background-color: var(--main-red);
+}
+
+.game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.rank-section .card {
+  background-color: var(--light-beige);
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--dark-purple);
+  margin-bottom: 3rem;
+
+}
+
+.rank-section .card span {
+  color: var(--main-yellow);
+  font-weight: 800;
+  text-shadow: 0 0 1px var(--dark-purple);
+}
+
+.try-again-button {
+  background-color: var(--dark-purple);
+  color: var(--light-beige);
+  padding: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.try-again-button:hover {
+  background-color: var(--main-yellow);
 }
