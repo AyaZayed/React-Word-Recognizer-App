@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Rank from "./Rank";
 import Practice from "./Practice";
+import Navbar from "./Navbar";
 
 function Game() {
   const [wordIndex, setWordIndex] = useState(0);
@@ -112,6 +113,7 @@ function Game() {
 
   return (
     <div>
+      <Navbar />
       {wordIndex === data.wordList.length ? (
         <Rank rank={rank} />
       ) : (

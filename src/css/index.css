@@ -20,11 +20,55 @@ body {
   background-repeat: no-repeat;
 }
 
-.home-page {
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 1;
+  height: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar ul li {
+  padding: 2rem;
+
+}
+
+.navbar .logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+
+}
+
+.navbar .start-button {
+  background-color: var(--dark-purple);
+  color: var(--light-beige);
+  padding: .8rem 1.5rem;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-page {
   width: 100vw;
   height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +124,7 @@ body {
   margin-bottom: 4rem;
   text-transform: capitalize;
   letter-spacing: 0.5rem;
+  text-shadow: 0 0 10px var(--dark-purple);
 }
 
 .practice-section .options-section button {

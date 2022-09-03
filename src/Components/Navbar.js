@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
+import Logo from "../images/logo with background.png";
 
-function Layout() {
+function Navbar() {
   return (
-    <nav>
+    <nav className="navbar">
       <ul>
         <li>
           <Link to="/">
-            <h1 className="logo">Word Recognizer</h1>
+            <img src={Logo} alt="logo" className="logo" />
           </Link>
         </li>
         <li>
           <Link to="/game" exact="true">
-            Start
+            <button className="start-button">Start</button>
           </Link>
         </li>
       </ul>
@@ -19,4 +20,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default Navbar;
