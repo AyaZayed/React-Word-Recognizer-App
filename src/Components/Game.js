@@ -2,13 +2,15 @@ import { useState } from "react";
 import Rank from "./Rank";
 import Practice from "./Practice";
 import Navbar from "./Navbar";
-import data from "../TestData.json";
+import { getData, calculateRank } from "../server/App";
 
 function Game() {
   const [wordIndex, setWordIndex] = useState(0);
   const [rank, setRank] = useState(0);
   const [score, setScore] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
+
+  const data = getData();
 
   function handleAnswer(e) {
     setWordIndex(wordIndex + 1);
@@ -18,18 +20,7 @@ function Game() {
     } else {
       setIsCorrect(false);
     }
-    calculateRank();
-  }
-
-  function calculateRank() {
-    const total = data.scoresList.length;
-    let lower = 0;
-    for (let i = 0; i < data.scoresList.length; i++) {
-      if (data.scoresList[i] < score) {
-        lower++;
-        setRank(((lower / total) * 100).toFixed(1));
-      }
-    }
+    setRank(calculateRank(score));
   }
 
   return (

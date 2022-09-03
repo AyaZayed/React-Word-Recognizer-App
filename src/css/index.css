@@ -220,7 +220,7 @@ body {
 }
 
 .practice-section .progress-section #progress {
-  width: calc(100% - 1rem);
+  width: 100%;
   height: 1rem;
   border-radius: 10px;
   -webkit-border-radius: 10px;
